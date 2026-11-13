@@ -144,7 +144,10 @@ jobs:
       uses: pierotofy/set-swap-space@master
       with:
         swap-size-gb: 12
-
+    - name: Set up Python 2
+      uses: actions/setup-python@v5
+      with:
+        python-version: 'pypy-2.7'
     - name: Building recovery
       run: |
         source build/envsetup.sh
